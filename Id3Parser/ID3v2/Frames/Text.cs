@@ -1,28 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
 
-namespace Id3Parser.ID3v2.Frames
+namespace Id3Parser.ID3v2.Frames;
+
+internal class TextFrame : Frame
 {
-    class TextFrame : Frame
+    /// <summary>
+    /// Encoded text content of frame
+    /// </summary>
+    public override string Value { get; protected set; }
+
+    public TextFrame(FrameHeader header, IEnumerable<byte> valueBytes) : base(header, valueBytes.ToArray())
     {
-        /// <summary>
-        /// Encoded text content of frame
-        /// </summary>
-        public override string Value { get; protected set; }
-        public TextFrame(FrameHeader header, IEnumerable<byte> valueBytes) : base(header, valueBytes.ToArray())
+        Value = valueBytes.ElementAt(0) switch
         {
-            if (valueBytes.ElementAt(0) == 0)
-                Value = Encoding.ASCII.GetString(valueBytes.Skip(1).ToArray());
-            else if (valueBytes.ElementAt(0) == 1)
-                Value = Encoding.Unicode.GetString(valueBytes.Skip(1).ToArray());
-            else
-                throw new NotImplementedException($"Encoding {valueBytes.ElementAt(0)} not implemented.");
-        }
-        public override string ToString()
-        {
-            return $"{FrameID}: {Value}";
-        }
+            0 => Encoding.ASCII.GetString(valueBytes.Skip(1).ToArray()),
+            1 => Encoding.Unicode.GetString(valueBytes.Skip(1).ToArray()),
+            _ => throw new NotImplementedException($"Encoding {valueBytes.ElementAt(0)} not implemented.")
+        };
     }
+
+    public override string ToString() => $"{FrameID}: {Value}";
 }
