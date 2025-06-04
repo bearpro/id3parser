@@ -10,6 +10,7 @@ namespace Id3Parser.MSTest
     public class ID3v23Parser_Test
     {
         [TestMethod]
+        [Ignore("Requires external MP3 files not present in repository")]
         public void ComplexTest1()
         {
             var path = @"C:\Users\BearPro\source\Workspaces\Id3Parser\Id3Parser\example\2017.11.13 _ Ботанический Сад Петра Великого — Что-то не так.mp3";
@@ -21,6 +22,7 @@ namespace Id3Parser.MSTest
             }
         }
         [TestMethod]
+        [Ignore("Requires external MP3 files not present in repository")]
         public void ComplexTest2()
         {
             var path = @"C:\Users\BearPro\source\Workspaces\Id3Parser\Id3Parser\example\2018.01.05 _ The Clash — I Fought the Law.mp3";
@@ -31,6 +33,7 @@ namespace Id3Parser.MSTest
             }
         }
         [TestMethod]
+        [Ignore("Requires external MP3 files not present in repository")]
         public void ComplexTest3()
         {
             var path = @"C:\Users\BearPro\source\Workspaces\Id3Parser\Id3Parser\example\2018.01.05 _ Useless ID — Land of Idiocracy.mp3";
@@ -41,6 +44,7 @@ namespace Id3Parser.MSTest
             }
         }
         [TestMethod]
+        [Ignore("Requires external MP3 files not present in repository")]
         public void ComplexTest4()
         {
             var path = @"C:\Users\BearPro\source\Workspaces\Id3Parser\Id3Parser\example\2018.11.15 _ Пурген — 1984-1988.mp3";

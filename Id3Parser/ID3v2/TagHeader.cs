@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Id3Parser.ID3v2
-{
+namespace Id3Parser.ID3v2;
+
     /// <summary>
     /// Заголовок ID3v2 тега
     /// </summary>
-    public class TagHeader
-    {
+public class TagHeader
+{
         /// <summary>
         /// Возвращает байты маркера заголовка ID3v2
         /// </summary>
@@ -80,5 +80,4 @@ namespace Id3Parser.ID3v2
         {
             return $"ID3v2 tag, Length: {Length}";
         }
-    }
 }

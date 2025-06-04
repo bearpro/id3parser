@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <Nullable>Enable</Nullable>
-    <TargetFramework>net6.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
 </Project>
