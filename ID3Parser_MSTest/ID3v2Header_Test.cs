@@ -3,11 +3,11 @@ using Id3Parser.ID3v2;
 using System;
 using System.Reflection;
 
-namespace Id3Parser.MSTest
+namespace Id3Parser.MSTest;
+
+[TestClass]
+public class ID3v2Header_Test
 {
-    [TestClass]
-    public class ID3v2Header_Test
-    {
         [TestMethod]
         public void TestParseLength()
         {
@@ -59,4 +59,3 @@ namespace Id3Parser.MSTest
             Assert.AreEqual(3, h.Version);
         }
     }
-}

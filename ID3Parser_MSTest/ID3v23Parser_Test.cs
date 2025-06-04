@@ -4,11 +4,11 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 
-namespace Id3Parser.MSTest
+namespace Id3Parser.MSTest;
+
+[TestClass]
+public class ID3v23Parser_Test
 {
-    [TestClass]
-    public class ID3v23Parser_Test
-    {
         [TestMethod]
         public void ComplexTest1()
         {
@@ -51,4 +51,3 @@ namespace Id3Parser.MSTest
             }
         }
     }
-}

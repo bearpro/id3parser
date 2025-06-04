@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Id3Parser.ID3v2
+namespace Id3Parser.ID3v2;
+
+public class Tag : IMetadata
 {
-    public class Tag : IMetadata
-    {
         public TagHeader Header { get; protected set; }
         public LinkedList<Frame> Frames { get; protected set; }
 
@@ -111,4 +111,3 @@ namespace Id3Parser.ID3v2
             }
         }
     }
-}
