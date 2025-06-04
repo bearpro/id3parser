@@ -4,10 +4,10 @@ using System.Text;
 using System.IO;
 using System.Linq;
 
-namespace Id3Parser
+namespace Id3Parser;
+
+public class V23Parser
 {
-    public class V23Parser
-    {
         public static IMetadata Parse(Stream stream)
         {
             byte[] buffer;
@@ -86,4 +86,3 @@ namespace Id3Parser
             throw new Exception("No ID3 in file");
         }
     }
-}

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Id3Parser.ID3v2
+namespace Id3Parser.ID3v2;
+
+public class Frame
 {
-    public class Frame
-    {
         public FrameHeader Header { get; protected set; }
         public ICollection<byte> RawBytes { get; protected set; }
         public string RawString { get; protected set; }
@@ -28,4 +28,3 @@ namespace Id3Parser.ID3v2
             return $"{FrameID}: {RawString}";
         }
     }
-}

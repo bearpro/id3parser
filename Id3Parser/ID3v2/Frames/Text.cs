@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Id3Parser.ID3v2.Frames
+namespace Id3Parser.ID3v2.Frames;
+
+class TextFrame : Frame
 {
-    class TextFrame : Frame
-    {
         /// <summary>
         /// Encoded text content of frame
         /// </summary>
@@ -25,4 +25,3 @@ namespace Id3Parser.ID3v2.Frames
             return $"{FrameID}: {Value}";
         }
     }
-}

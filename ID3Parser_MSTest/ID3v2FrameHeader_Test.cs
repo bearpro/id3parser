@@ -4,11 +4,11 @@ using System.Text;
 using Id3Parser.ID3v2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Id3Parser.MSTest
+namespace Id3Parser.MSTest;
+
+[TestClass]
+public class ID3v2FrameHeader_Test
 {
-    [TestClass]
-    public class ID3v2FrameHeader_Test
-    {
         [TestMethod]
         public void ComplexTest()
         {
@@ -17,4 +17,3 @@ namespace Id3Parser.MSTest
             Assert.AreEqual("POPM", h.FrameID);
         }
     }
-}
