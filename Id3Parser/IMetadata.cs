@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Id3Parser
+namespace Id3Parser;
+
+public interface IMetadata
 {
-    public interface IMetadata
-    {
         // COMM
         string? Comments { get; }
         // PCNT
@@ -42,5 +42,4 @@ namespace Id3Parser
         int? TrackNumber { get; }
         // TRACK
         int? TrackTotal { get; }
-    }
 }

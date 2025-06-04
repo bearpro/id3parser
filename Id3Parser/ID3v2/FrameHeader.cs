@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Id3Parser.ID3v2
-{
+namespace Id3Parser.ID3v2;
+
     /// <summary>
     /// Заголовок фрейма IDv2 тега
     /// </summary>
-    public class FrameHeader
-    {
+public class FrameHeader
+{
         /// <summary>
         /// Строковой идентификатор кадра
         /// </summary>
@@ -73,5 +73,4 @@ namespace Id3Parser.ID3v2
         {
             return $"{FrameID}, Length: {Length}";
         }
-    }
 }
